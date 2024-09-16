@@ -964,6 +964,9 @@ sound/items/taunts/badpipes/badpipes2.mp3 CRC:0015612543 size:170843
 sound/items/taunts/badpipes/badpipes3.mp3 CRC:00f35d9e7e size:170843
 sound/items/taunts/badpipes/badpipes4.mp3 CRC:00c9e687dd size:170843
 sound/items/taunts/badpipes/badpipes5.mp3 CRC:00241910ae size:170843
+sound/items/taunts/borrowed_bones/borrowed_bones_end.wav CRC:003ec7c5b2 size:214772
+sound/items/taunts/borrowed_bones/borrowed_bones_mid.wav CRC:00ab6c3ec2 size:362460
+sound/items/taunts/borrowed_bones/borrowed_bones_start.wav CRC:00b89b7085 size:226624
 sound/items/taunts/killer_solo/killer_solo_01.mp3 CRC:00b1152645 size:71093
 sound/items/taunts/killer_solo/killer_solo_02.mp3 CRC:009d55fc5b size:71093
 sound/items/taunts/killer_solo/killer_solo_03.mp3 CRC:00bf910e51 size:71093
@@ -973,6 +976,7 @@ sound/items/taunts/scout_boston_breakdance/scout_boston_breakdance_02.mp3 CRC:00
 sound/items/taunts/scout_boston_breakdance/scout_boston_breakdance_03.mp3 CRC:00e2f362aa size:75966
 sound/items/taunts/scout_boston_breakdance/scout_boston_breakdance_04.mp3 CRC:00ea296ed0 size:83489
 sound/items/taunts/scout_boston_breakdance/scout_boston_breakdance_05.mp3 CRC:0094b4bd3a size:82236
+sound/items/taunts/spy_travel_agent/spy.travel_agent_helicopter_loop.wav CRC:002a6f5154 size:274288
 sound/items/tf_music_upgrade_machine.wav CRC:004d70001b size:5330162
 sound/midi/intruder_alert_midi.midi CRC:007002a059 size:16567
 sound/misc/achievement_earned.wav CRC:00fc970887 size:1785346
@@ -1768,6 +1772,10 @@ sound/player/taunt_luxury_lounge_sit.wav CRC:0099eb8795 size:134352
 sound/player/taunt_machete_catch.wav CRC:00aef78613 size:7032
 sound/player/taunt_machete_draw.wav CRC:009113f311 size:63640
 sound/player/taunt_medic_heroic.wav CRC:004f889b53 size:1059848
+sound/player/taunt_medium_clap1.wav CRC:002b5d2378 size:54616
+sound/player/taunt_medium_clap2.wav CRC:0026c0a699 size:56528
+sound/player/taunt_medium_clap3.wav CRC:0053a42fb1 size:55880
+sound/player/taunt_medium_clap4.wav CRC:004c98f00f size:55416
 sound/player/taunt_moped_end_engine_off.wav CRC:00049538fd size:123706
 sound/player/taunt_moped_end_scout_foot1.wav CRC:00643e4027 size:10120
 sound/player/taunt_moped_end_scout_foot2.wav CRC:00b9e52166 size:7962
@@ -1788,11 +1796,17 @@ sound/player/taunt_puff.wav CRC:004ef6ba88 size:175124
 sound/player/taunt_puff_ah.wav CRC:00ed7d73e0 size:362626
 sound/player/taunt_pyro_balloonicorn.wav CRC:00294b96b5 size:942848
 sound/player/taunt_pyro_hellicorn.wav CRC:00c5a84978 size:942848
+sound/player/taunt_rocket_hover_loop.wav CRC:00c3335358 size:1509396
+sound/player/taunt_rocket_hover_start.wav CRC:0023d7c34d size:114704
+sound/player/taunt_rocket_hover_stop.wav CRC:0089aae14e size:124180
+sound/player/taunt_rocket_hover_stop_thruster.wav CRC:00005eaeb8 size:272088
 sound/player/taunt_rockstar.wav CRC:00b7d94de1 size:126594
 sound/player/taunt_rockstar_end.wav CRC:00ccf80a7d size:123778
 sound/player/taunt_rubberglove_snap.wav CRC:00e6db5877 size:58242
 sound/player/taunt_rubberglove_stretch.wav CRC:00f9ae5714 size:101506
 sound/player/taunt_runners_rhythm_bongo_slide.wav CRC:0033a76741 size:80632
+sound/player/taunt_scorchers_solo1.wav CRC:00dc2d4556 size:2204720
+sound/player/taunt_scorchers_solo2.wav CRC:00e9f517f2 size:2087508
 sound/player/taunt_sfx_bell_single.wav CRC:00fed47f3a size:242172
 sound/player/taunt_sfx_flip_01.wav CRC:00456e33fc size:249188
 sound/player/taunt_shake_it.wav CRC:00e298d77f size:62604
@@ -2166,7 +2180,7 @@ sound/ui/item_mtp_pickup.wav CRC:002cedfb32 size:37528
 sound/ui/item_nvg_pickup.wav CRC:0047682f59 size:38836
 sound/ui/item_open_crate.wav CRC:00efe12606 size:902636
 sound/ui/item_open_crate_short.wav CRC:0038376f94 size:740816
-sound/ui/item_open_holiday_crate.wav CRC:002ee9ad7f size:695508
+sound/ui/item_open_holiday_crate.wav CRC:00a64f168d size:869466
 sound/ui/item_pack_drop.wav CRC:0055778bce size:64638
 sound/ui/item_pack_pickup.wav CRC:004ed294eb size:69618
 sound/ui/item_paint_can_pickup.wav CRC:00f0082b0c size:202582

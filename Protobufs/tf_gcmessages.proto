@@ -166,8 +166,11 @@ enum ETFGCMsg {
 	k_EMsgGCQuestStrangeEvent = 6577;
 	k_EMsgGC_AcceptLobbyInvite = 6578;
 	k_EMsgGC_AcceptLobbyInviteReply = 6579;
+	k_EMsgGC_SDRTicket = 6580;
 	k_EMsgGC_ProcessMatchVoteKick = 6581;
 	k_EMsgGC_ProcessMatchVoteKickResponse = 6582;
+	k_EMsgGCToGC_SendAccountBannedNotifications = 6584;
+	k_EMsgGCToGC_SendNotification = 6585;
 	k_EMsgGCDev_GrantWarKill = 10001;
 }
 
@@ -251,6 +254,7 @@ enum TFMatchLeaveReason {
 }
 
 enum TFVoteKickReason {
+	TFVoteKickReason_Invalid = -1;
 	TFVoteKickReason_Other = 0;
 	TFVoteKickReason_Cheating = 1;
 	TFVoteKickReason_Idle = 2;
@@ -900,6 +904,7 @@ message CMsgGameServerMatchmakingStatus {
 	optional bool server_trusted = 11;
 	optional bool server_dedicated = 12;
 	optional uint32 strict = 17;
+	optional string fake_ip = 25;
 	repeated .CMsgGameServerMatchmakingStatus.Player players = 13;
 	optional .TF_GC_GameState game_state = 14 [default = TF_GC_GAMESTATE_STATE_INIT];
 	optional .CMsgGameServerMatchmakingStatus.Event event = 15 [default = None];
@@ -1031,16 +1036,13 @@ message CMsgProcessMatchVoteKick {
 	optional fixed64 match_id = 1;
 	optional fixed64 initiator_steam_id = 2;
 	optional fixed64 target_steam_id = 3;
-	optional .TFVoteKickReason reason = 4 [default = TFVoteKickReason_Other];
+	optional .TFVoteKickReason reason = 4 [default = TFVoteKickReason_Invalid];
 	repeated .CMsgProcessMatchVoteKick.Vote votes = 5;
 	optional bool default_pass = 6;
 }
 
 message CMsgProcessMatchVoteKickResponse {
 	optional bool rip = 1;
-}
-
-message CMsgPlayerVoteKickedAfterLeavingMatchResponse {
 }
 
 message CMsgHalloween_ServerBossEvent {
@@ -1362,7 +1364,7 @@ message CSOTFRatingData {
 message CMsgGC_TFVoteKickPlayerRequest {
 	optional uint64 target_id = 2;
 	optional uint64 voter_id = 3;
-	optional .TFVoteKickReason reason = 4 [default = TFVoteKickReason_Other];
+	optional .TFVoteKickReason reason = 4 [default = TFVoteKickReason_Invalid];
 	optional uint64 match_id = 5;
 }
 
@@ -1615,4 +1617,22 @@ message GCQuestStrangeEvent {
 	optional uint64 quest_id = 3;
 	optional uint32 strange_event_id = 4;
 	optional uint32 score = 5;
+}
+
+message CMsgSDRTicket {
+	optional bytes serialized_ticket = 1;
+}
+
+message CMsgAuthorizeServerItemRetrieval {
+	repeated uint64 item_id = 1;
+}
+
+message CMsgGCToGCSendAccountBannedNotifications {
+	optional uint32 banned_accountid = 1;
+	optional uint32 report_period_begin = 2;
+	optional uint32 report_period_end = 3;
+}
+
+message CMsgGCToGCSendNotification {
+	optional .CMsgGCNotification notification = 1;
 }
